@@ -99,13 +99,40 @@ export default function App() {
           </Text>
 
           <Text style={styles.info}>
-            Linguagem: {filmeSorteado.language}
+            Linguagem:
+            {' '}
+            {filmeSorteado.language === 'English'
+              ? 'Inglês'
+              : filmeSorteado.language === 'Japanese'
+              ? 'Japonês'
+              : filmeSorteado.language === 'Spanish'
+              ? 'Espanhol'
+              : filmeSorteado.language} 
           </Text>
 
           <Text style={styles.info}>
             Gêneros:
             {' '}
-            {filmeSorteado.genres.join(', ')}
+            {filmeSorteado.genres.map((genero) => {
+              
+              const traducoes = {
+                Comedy: 'Comédia',
+                Action: 'Ação',
+                Crime: 'Crime',
+                Drama: 'Drama',
+                Romance: 'Romance',
+                Horror: 'Terror',
+                Fantasy: 'Fantasia',
+                Adventure: 'Aventura',
+                Anime: 'Anime',
+                Family: 'Família',
+                ScienceFiction: 'Ficção Científica',
+              };
+
+              return traducoes[genero] || genero;
+
+            }).join(', ')}
+
           </Text>
 
         </View>
