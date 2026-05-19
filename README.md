@@ -46,7 +46,39 @@ Filmes-App/
 ├── package.json
 └── README.md
 ```
+---
 
+# ▶️ Como executar o projeto
+ 
+## 1. Clonar o repositório
+ 
+```bash
+git clone LINK_DO_REPOSITORIO
+```
+ 
+---
+ 
+## 2. Entrar na pasta do projeto
+ 
+```bash
+cd Filmes-App
+```
+ 
+---
+ 
+## 3. Instalar dependências
+ 
+```bash
+npm install
+```
+ 
+---
+ 
+## 4. Executar o projeto
+ 
+```bash
+npx expo start
+``` 
 ---
 
 # 📷 Demonstração
